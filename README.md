@@ -11,9 +11,7 @@ This sample utilizes the following files:
 3.  Power BI Report: Contains the above two Excel files and creates appropriate relationships.
 
 Note:
-Static Data and Live data can be any type of source, it can be a Datamart/Sharepoint Lists/Excels or CSV/ or any database.In the Power Query editor, ensure that you uncheck the "Include in Report Refresh" option for the static data table. This prevents the static data table from running every time the refresh is triggered.
-![image](https://github.com/saurav2267/PBI-Report-Refresh/assets/55321375/f11024c6-e1a9-407b-9e50-788beb6dfdd5)
-In the above image uncheck the "Include in Report refresh".
+Static Data and Live data can be any type of source, it can be a Datamart/Sharepoint Lists/Excels or CSV/ or any database.In the Power Query editor, ensure that you uncheck the "Include in Report Refresh" option for the static data table. This prevents the static data table from running every time the refresh is triggered.![image](https://github.com/saurav2267/PBI-Report-Refresh/assets/55321375/f11024c6-e1a9-407b-9e50-788beb6dfdd5)
 
 We create a DAX Calculated Table which is an union of the tables : UNION ('Live Data','Static Data').Sometimes, the order of the columns might not be in the intended order, which can mess up the schema. To overcome this issue, use SELECTCOLUMNS to adjust the column order as shown in the final code snippet above.
 Finally to achieve the desired scenario. The code is as follows:
